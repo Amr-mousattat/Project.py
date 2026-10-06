@@ -26,13 +26,15 @@ readings = []
 for i in range(count):
     readings.append(int(input(f"Enter reading {i+1}: ")))
 
-print("Readings: ", readings)
+if readings:
+    print("Readings: ", readings)
 
 #to check if list isn't empty
 if readings:
     print("Reading 1:", readings[0])
     print("Last reading:", readings[-1])
-    print("slice:", readings[1:3])
+    if len(readings) >= 4: print("slice:", readings[1:4])
+    else: print("Slice: list is too short")
     print("sum:", sum(readings))
 else: 
     print("nothing inside list to begin with")
@@ -46,15 +48,16 @@ def measurement(reading, k, shift):
 
 shiftedRange = [x + shift for x in readings]
 ScaledRange = [x * k for x in readings]
-
-print("original ", readings)
-print("shifted:", shiftedRange)
-print("Scaled: ", ScaledRange)
+if readings:
+    print("original ", readings)
+    print("shifted:", shiftedRange)
+    print("Scaled: ", ScaledRange)
 
 # Part C - zip
 
-Zipped = [x + y for x,y in zip(shiftedRange, ScaledRange)]
-print("zipped", Zipped)
+zipped = [x + y for x,y in zip(readings, shiftedRange)]
+if readings:
+    print("zipped", zipped)
 
 # Part D - Debugging
 
@@ -67,22 +70,27 @@ print("zipped", Zipped)
 
 # way #1
 readings = [10, 20, 30]
-shifted = (x + shift for x in readings)
+shifted = [x + shift for x in readings]
 
 # way #2
 readings = [10, 20, 30]
 shifted = []
 
 for i in range(len(readings)):
-    shifted = readings.append(i+shift)
+    shifted.append(i+shift)
 
 # Part E - challenge
 def calibrate(readings, shift, k):
-    shifted = (x + shift for x in readings)
-    scaled = (x * k for x in readings)
-    combined = (x + y for x,y in zip(readings, shifted))
+    shifted = [x + shift for x in readings]
+    scaled = [x * k for x in readings]
+    combined = [x + y for x,y in zip(readings, shifted)]
 
     return shifted, scaled, combined
 
+shifted, scaled, combined = calibrate(readings, shift, k)
+
+print("Shifted:", shifted)
+print("Scaled:", scaled)
+print("Combined:", combined)
 
 
