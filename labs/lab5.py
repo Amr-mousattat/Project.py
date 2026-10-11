@@ -66,7 +66,8 @@ if readings:
 
 # for i in range(len(readings)):
 #     shifted[i] += shift
-# In this case all we are doing was give shifted the same memory as readings (meaning we did not make a copy with a shift added 
+# In this case all we are doing was give shifted the same memory as readings (meaning we did not make a copy with a shift added. We only made a copy of the reference to the same list. 
+# Sof when we changed shifted, readings also changed. To fix this we can use a list comprehension to create a new list with the shift added to each element of readings.
 
 # way #1
 readings = [10, 20, 30]
