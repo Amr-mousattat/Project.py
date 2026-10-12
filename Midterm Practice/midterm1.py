@@ -35,6 +35,7 @@ word[1] # o
 word[-2] # E
 word[1:6:2] # OPT
 word[::-1] # Retupcom
+word[:-1] # Retupcom
 print(word[::-1])
 
 #Q6 — String Methods and Splitting (2 marks)
@@ -114,7 +115,7 @@ def alternating_total(limit):
     while number <= limit:
         if(number % 2 == 1):
             total += number
-        if(number % 2):
+        else:
             total -= number
         if(abs(number) >= 10):
             break

@@ -215,3 +215,6 @@ def analyze_words(sentence: str, minimum: int):
 print(analyze_words("Python is very useful", 4))
 print(analyze_words("I love programming in Python", 6))
 print(analyze_words("cat dog bird", 5))
+
+# comma or : stands for formatting
+print("{:,.4f}".format(150))
