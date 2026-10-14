@@ -87,7 +87,7 @@ x = 0
 
 # This program will print the values in the list until it encounters a negative value, at which point it will skip that value 
 # and continue with the next iteration of the loop. If it encounters a zero, it will break out of the loop completely.
-values = [3, -1, 5, 0, 8]
+values = [3, -1, 5, 0, 8] #expected : [3, 5]
 
 for value in values:
     if value < 0:

@@ -212,6 +212,7 @@ def analyze_words(sentence: str, minimum: int):
             result.append(word)
     return result
 
+
 print(analyze_words("Python is very useful", 4))
 print(analyze_words("I love programming in Python", 6))
 print(analyze_words("cat dog bird", 5))
