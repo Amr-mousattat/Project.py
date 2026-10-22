@@ -77,11 +77,8 @@ print("New Column:", finalColumn)
 
 #Part D — Sub-array
 #Do not assume k is smaller than the number of columns; handle the situation safely.
-safe_row = min(rows_keep, len())
-safe_cols = min(k, len(matrix[0]))
-
-sub_array = [row[:safe_cols] for row in matrix[:safe_row]]
-
+sub_array = [row[:k] for row in matrix[:rows_keep]]
+print("Sub-array:", sub_array)
 """
 grid = [[1, 2], [3, 4]]
 copy_grid = grid[:]
