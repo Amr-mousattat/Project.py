@@ -1,0 +1,5 @@
+Welcome to the File I/O practice!
+This is a sample text file for Python.
+Each line contains a short message.
+Python can read this file one line at a time.
+The final line is here.

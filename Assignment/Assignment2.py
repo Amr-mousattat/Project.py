@@ -85,7 +85,7 @@ The number of columns in A must equal the number of rows in B.
 
 Example:
 
-A = 2*3
+A = 2*3f
 B = 3*2
 result = 2*2 -> basically a square if you think about it
 """
@@ -116,3 +116,5 @@ B = [[7, 8],
      [2, 3]]  # 3x2 matrix
 
 print(matrix_multiply(A, B))
+
+#Post-Submission challenges:
